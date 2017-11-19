@@ -1,3 +1,4 @@
+# WechatApp-LifeAssistant
 ## 小程序开发体验   
 
 ###   Hello world
@@ -130,18 +131,4 @@
   - 没有小程序号的限制
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  # WechatApp-LifeAssistant
+ 
