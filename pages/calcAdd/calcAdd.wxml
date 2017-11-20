@@ -1,0 +1,18 @@
+<!--pages/calcAdd/calcAdd.wxml-->
+<view class="container">
+    <input placeholder="被加数" bindinput="bindInput1"/>
+    <input placeholder="加数" bindinput="bindInput2"/>
+    <button type="primary" bindtap="bindAdd">计算</button>
+    <input placeholder="结果" value="{{result1}}" disabled/>
+</view>
+
+<view class="container content">
+    <view class="section_title">被加数</view>
+    <slider min="0" max="1000" bindchange="bindInput3" show-value/>
+    <view class="section_title">加数</view>
+    <slider min="0" max="1000" bindchange="bindInput4" show-value/>
+    <button type="primary" size="mini" bindtap="bindAdd">计算</button>
+    
+    <view class="section_title">结果</view>
+    <view>{{result2}}</view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/phonehome/phonehome.wxml-->
+<view class="content">
+    <view class="page_hd">
+        <text class="page_title">手机归属地查询</text>
+    </view>
+    <view class="section">
+        <input name="phone" placeholder="手机号码" bindinput="bindInput" />
+        <button type="primary" bindtap="phoneTab">查询</button>
+    </view>
+
+    <view class="pin_item" wx:if="{{errNum == 0}}">
+        <view class="pih_title">手机号：{{phone}}</view>
+        <view class="pih_title">所属省份：{{province}}</view>
+        <view class="pih_title">所属城市：{{city}}</view>
+        <view class="pih_title">手机段号：{{prefix}}</view>
+        <view class="pih_title">运营商：{{supplier}}</view>
+    </view>
+    <view class="pih_item" wx:if="{{errMsg != ''}}">
+        <view class="err-msg">错误信息：{{errNum}} - {{errMsg}}</view>
+    </view>
+</view>

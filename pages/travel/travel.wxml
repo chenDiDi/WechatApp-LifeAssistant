@@ -1,0 +1,48 @@
+<!--pages/travel/travel.wxml-->
+<view class="content">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section">
+            <view class="section_title">性别：</view>
+            <radio-group name="sex">
+                <label><radio value="male" checked />男</label>
+                <label><radio value="female" style="margin-left:20rpx;" />女</label>
+            </radio-group>
+        </view>
+        <view class="section">
+            <view class="section_title">想去的国家:</view>
+            <checkbox-group name="region">
+                <label class="checkbox" wx:for="{{regions}}">
+                    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+                    {{item.value}}
+                </label>
+            </checkbox-group>
+        </view>
+         <view class="section">
+            <view class="section_title">出发日期:</view>
+            <picker mode="date" name="date1" value="{{date}}" start="2017-05-10" end="2018-05-10" bindchange="bindDateChange">
+                <view class="picker">
+                    {{date}}
+                </view>
+            </picker>
+        </view>
+        <view class="section">
+            <view class="section_title">出发时间:</view>
+            <picker mode="time" name="time1" value="{{time}}" start="08:00" end="22:00" bindchange="bindTimeChange">
+                <view class="picker">
+                    {{time}}
+                </view>
+            </picker>
+        </view>
+        <view class="section">
+            <view class="section_title">其他建议:</view>
+            <textarea name="suggest" style="height:100rpx;" placeholder="建议" value="{{suggest}}" />
+        </view>
+        <view class="btn-area">
+            <button form-type="submit" type="primary">提交</button>
+            <button form-type="reset">重置</button>
+        </view>
+    </form>
+    <loading hidden="{{hidden}}">
+        提交数据中…
+    </loading>
+</view>
