@@ -1,0 +1,23 @@
+/* pages/calcAdd/calcAdd.wxss */
+.container {
+    justify-content: flex-start;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #333;
+}
+.container input {
+    background-color: #eee;
+    border-radius: 3px;
+    text-align: left;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin: 20rpx;
+    padding: 0 20rpx;
+}
+.container button {
+    width: 80%;
+}
+.content slider,
+.content view,
+.content button {
+    margin: 40rpx;
+}

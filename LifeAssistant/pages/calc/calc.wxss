@@ -1,0 +1,58 @@
+/* pages/calc/calc.wxss */
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    box-sizing: border-box;
+    padding-top: 10rpx;
+    margin-left: 5rpx;
+}
+.screen {
+    background-color: #fff;
+    text-align: right;
+    width: 650rpx;
+    height: 140rpx;
+    line-height: 140rpx;
+    padding: 0 20rpx;
+    margin: 20rpx;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.btnGroup {
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx;
+}
+.swiGroup {
+    margin: 10rpx auto;
+    align-items: center;
+}
+.btnGroup button {
+    width: 160rpx;
+    min-height: 135rpx;
+    margin: 10rpx 10rpx 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 135rpx;
+}
+.orange {
+    background-color: #f78d1d;
+    color: #fef4e9;
+    border: 1px solid #da7c0c;
+}
+.blue {
+    background-color: #0095cd;
+    color: #d9eef7;
+    border: 1px solid #0076a3;
+}
+/*数字按钮按下的状态*/
+.button-hover-num {
+    background-color: #0094cc;
+    opacity: 0.7;
+}
+/*控制按钮按下的状态*/
+.other-button-hover {
+    background-color: #F5AD5F;
+}

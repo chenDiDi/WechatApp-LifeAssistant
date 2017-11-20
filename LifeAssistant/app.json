@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/location/location",
+    "pages/calcAdd/calcAdd",    
+    "pages/calc/calc",    
+    "pages/history/history",    
+    "pages/travel/travel",    
+    "pages/phonehome/phonehome",
+    "pages/weather/weather",
+    "pages/index/index",
+    "pages/log/log"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
