@@ -3,34 +3,11 @@ Page({
     markers: [{
       iconPath: "/resources/anchor.png",
       id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 0,
+      longitude: 0,
       width: 30,
       height: 30
     }],
-    polyline: [{
-      points: [{
-        longitude: 113.3245211,
-        latitude: 23.10229
-      }, {
-        longitude: 113.324520,
-        latitude: 23.21229
-      }],
-      color: "#FF0000DD",
-      width: 2,
-      dottedLine: true
-    }],
-    controls: [{
-      id: 1,
-      iconPath: '/resources/anchor.png',
-      position: {
-        left: 0,
-        top: 300 - 50,
-        width: 30,
-        height: 30
-      },
-      clickable: true
-    }]
   },
   regionchange(e) {
     console.log(e.type)
@@ -40,5 +17,30 @@ Page({
   },
   controltap(e) {
     console.log(e.controlId)
+  },
+  getCurrentLocation: function() {
+    let that = this;
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        console.log(res, 'res0---');
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        var markers = [];
+        markers.push({
+          iconPath: "/resources/anchor.png",
+          id: 0,
+          latitude: res.latitude,
+          longitude: res.longitude,
+          width: 30,
+          height: 30
+        })
+        that.setData({
+          markers,
+        })
+      }
+    })
   }
 })

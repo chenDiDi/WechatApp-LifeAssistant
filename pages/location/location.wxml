@@ -1,10 +1,11 @@
 <!-- map.wxml -->
-<!-- <view class='container'> -->
+<view class='Container'> 
   <map 
     id="map" 
     longitude="113.324520" 
     latitude="23.099994" 
     scale="14" 
+    label="当前定位"
     controls="{{controls}}" 
     bindcontroltap="controltap" 
     markers="{{markers}}" 
@@ -12,6 +13,9 @@
     polyline="{{polyline}}" 
     bindregionchange="regionchange" 
     show-location 
-    style="width: 100%; height: 600px;">
+    class='MapStatus'>
   </map>
-<!-- </view> -->
+  <view hover-class='CurrentLocationHover' class='CurrentLocation' bindtap="getCurrentLocation">
+    <image src='../../resources/location.png' alt='Gets the current position'></image>  
+  </view>
+</view> 
