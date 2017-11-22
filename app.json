@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/location/location",
+    "pages/run/run",
     "pages/calcAdd/calcAdd",    
     "pages/calc/calc",    
     "pages/history/history",    

@@ -2,9 +2,9 @@
 <view class='Container'> 
   <map 
     id="map" 
-    longitude="113.324520" 
-    latitude="23.099994" 
-    scale="14" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}"
+    scale="14"
     label="当前定位"
     controls="{{controls}}" 
     bindcontroltap="controltap" 
@@ -12,10 +12,10 @@
     bindmarkertap="markertap" 
     polyline="{{polyline}}" 
     bindregionchange="regionchange" 
-    show-location 
+    show-location
     class='MapStatus'>
   </map>
-  <view hover-class='CurrentLocationHover' class='CurrentLocation' bindtap="getCurrentLocation">
+  <view hover-class='CurrentLocationHover' class='CurrentLocation' bindtap="_getCurrentLocation">
     <image src='../../resources/location.png' alt='Gets the current position'></image>  
   </view>
 </view> 
