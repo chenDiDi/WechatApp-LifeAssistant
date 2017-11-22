@@ -7,10 +7,18 @@
   width: 100%;
   height: 100%;
 }
-.CurrentLocation {
+.HandleCont {
+  width: 98%;
   position: absolute;
   bottom: 40rpx;
-  left: 40rpx;
+  left: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.HandleCont .ScaleHandle {
+  display: flex;
+}
+.HandleItem {
   width: 80rpx;
   height: 80rpx;
   background: #fff;
@@ -19,11 +27,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20rpx;
 }
-.CurrentLocationHover {
-  background: rgba(19, 34, 122, 0.2);
-}
-.CurrentLocation image{
+.HandleItem image{
   width: 50rpx;
   height: 50rpx;
+}
+.HandleItemHover {
+  background: rgba(19, 34, 122, 0.2);
 }
