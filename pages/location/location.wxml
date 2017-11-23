@@ -4,12 +4,11 @@
     id="map" 
     longitude="{{longitude}}" 
     latitude="{{latitude}}"
-    scale="15"
-    label="当前定位"
+    scale="18"
+    markers="{{markers}}" 
     polyline="{{polyline}}"
     controls="{{controls}}" 
     bindcontroltap="controltap" 
-    markers="{{markers}}" 
     bindmarkertap="markertap" 
     bindregionchange="regionchange" 
     show-location
@@ -18,18 +17,18 @@
   <view class='HandleCont'>
     <view class='ScaleHandle'>
       <view hover-class='HandleItemHover' class='HandleItem' bindtap="_getCurrentLocation">
-        <image src='../../resources/location.png' alt='Gets the current position'></image>  
+        <image src='../../images/location/location.png' alt='Gets the current position'></image>  
       </view>
       <view hover-class='HandleItemHover' class='HandleItem' bindtap="_openMapGuide">
-        <image src='../../resources/location-arrow.png' alt='go to the position'></image>  
+        <image src='../../images/location/location-arrow.png' alt='go to the position'></image>  
       </view>
     </view>
     <view class='ScaleHandle'>
       <view hover-class='HandleItemHover' class='HandleItem' bindtap="_shrinkHandle">
-        <image src='../../resources/magnify.png' alt='magify'></image>  
+        <image src='../../images/location/magnify.png' alt='magify'></image>  
       </view>
       <view hover-class='HandleItemHover' class='HandleItem' bindtap="_magnifyHandle">
-        <image src='../../resources/shrink.png' alt='shrink'></image>  
+        <image src='../../images/location/shrink.png' alt='shrink'></image>  
       </view>
     </view>
   </view>
