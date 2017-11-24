@@ -69,19 +69,22 @@ Page({
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
+          url: 'https://help.aliyun.com/document_detail/31849.html?spm=5176.doc31848.6.589.Zt0BZ4', //接口地址
           filePath: tempFilePaths[0],
-          name: 'file',
+          name: 'imagesFile',
           formData: {
             'user': 'test'
           },
           success: function (res) {
-            var data = res.data
+            var data = res.data;
             console.log(res, 'res00-----');
+          },
+          fail: function () {
+            console.log('falis');
           }
         })
         _this.setData({
-          imgUrl: tempFilePaths[0],
+          imgUrl: 'tempFilePaths[0]',
         })
       }
     })
